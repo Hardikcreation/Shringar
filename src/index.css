@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #b8860b;
+  --color-gold-light: #ffd700;
+  --color-gold-pale: #fff8ed;
+  --color-jewel-dark: #1a0f00;
+  --color-jewel-brown: #4a2800;
+  --color-jewel-cream: #fdfaf5;
+  --color-text-muted: #7c6a52;
+  --color-border: #e8d5b0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-jewel-cream text-jewel-dark font-body antialiased;
+}
+
+.page-transition {
+  @apply animate-fade-in;
+}
+
+.gold-border {
+  box-shadow: 0 0 0 1px rgba(232, 213, 176, 0.9);
+}
+
+.gold-shimmer {
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 215, 0, 0.4),
+    rgba(255, 255, 255, 0.08)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+.card-hover {
+  @apply transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-xl;
+}
+
+.scrollbar-thin-gold::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin-gold::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin-gold::-webkit-scrollbar-thumb {
+  background-color: rgba(184, 134, 11, 0.6);
+  border-radius: 999px;
+}
+
+.stepper-line {
+  background: linear-gradient(
+    to bottom,
+    #b8860b 0%,
+    #ffd700 50%,
+    #e8d5b0 100%
+  );
+}
+
